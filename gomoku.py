@@ -1,6 +1,25 @@
-#Author(s): Michael Guerzhoy with tests contributed by Siavash Kazemian.  Last modified: Nov. 1, 2023
+#Author(s): Michael Guerzhoy with tests contributed by Siavash Kazemian.  Project Last modified: Nov. 1, 2023
+
+"""
+Gomoku AI - Automated Board Game Player
+Author: [Tannaz Chowdhury]
+Date: [10/2024]
+Course: ESC180 - Introduction to Computer Programming
+
+Description:
+This AI agent plays Gomoku, an 8x8 board game where players aim to 
+align five stones in a row. The program evaluates board positions 
+and selects optimal moves using heuristic-based decision-making.
+
+Key Features:
+- Identifies open, semi-open, and closed sequences.
+- Implements heuristic evaluation to rank possible moves.
+- Simulates AI vs. AI and AI vs. Human matches.
+
+"""
 
 
+#check if the board to play on is empty / contains pieces 
 def is_empty(board):  
     for row in board:
         for entry in row:
@@ -8,7 +27,7 @@ def is_empty(board):
                 return False
     return True 
     
-# This function analyses the sequence of length length  that ends at location (y end, x end).
+# This function analyses the length sequence  that ends at location (y end, x end).
 #The function returns "OPEN" if the sequence is open, "SEMIOPEN" if the sequence if semi-open, and "CLOSED"
 #if the sequence is closed.
 #Assume that the sequence is complete (i.e., you are not just given a subsequence) and valid, and
